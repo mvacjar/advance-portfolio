@@ -30,7 +30,7 @@ function createRefreshToken(user) {
 }
 
 function decoded(token) {
-  return jwt.decode(token, JWT_SECRET_KEY, true);
+  return jwt.verify(token, JWT_SECRET_KEY);
 }
 
 module.exports = {

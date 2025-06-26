@@ -1,11 +1,13 @@
 const Course = require('../models/course');
 const image = require('../utils/image');
+const { S3Client, DeleteObjectCommand } = require('@aws-sdk/client-s3');
 
 async function createCourse(req, res) {
   const course = new Course(req.body);
 
-  const imagePath = image.getFilePath(req.files.miniature);
-  course.miniature = imagePath;
+  if (req.file && req.file.location) {
+    user.avatar = req.file.location;
+  }
 
   try {
     const courseStored = await course.save();

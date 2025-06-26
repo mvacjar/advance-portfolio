@@ -1,5 +1,5 @@
 const express = require('express');
-const multiparty = require('connect-multiparty');
+// const multiparty = require('connect-multiparty');
 const UserController = require('../controllers/user');
 const md_auth = require('../middleware/authenticated');
 const md_upload = require('../utils/bucketS3');

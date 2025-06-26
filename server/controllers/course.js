@@ -1,5 +1,4 @@
 const Course = require('../models/course');
-const image = require('../utils/image');
 const { S3Client, DeleteObjectCommand } = require('@aws-sdk/client-s3');
 
 const s3 = new S3Client({

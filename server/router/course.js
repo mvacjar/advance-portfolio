@@ -1,10 +1,7 @@
 const express = require('express');
-// const multiparty = require('connect-multiparty');
 const CourseController = require('../controllers/course');
 const md_auth = require('../middleware/authenticated');
 const md_upload = require('../utils/bucketS3');
-
-// const md_upload = multiparty({ uploadDir: 'uploads/course' });
 
 const api = express.Router();
 

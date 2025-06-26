@@ -70,7 +70,7 @@ async function updateUser(req, res) {
   }
 
   try {
-    await User.findByIdAndUpdate({ _id: id }, userData);
+    await User.findByIdAndUpdate({ _id: id }, userData, { new: true });
     res.status(200).send({ msg: 'Updated' });
   } catch (error) {
     res.status(400).send({ msg: 'Error updating user' });

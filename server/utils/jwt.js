@@ -7,7 +7,7 @@ function createAccessToken(user) {
   expToken.setDate(expToken.getDate() + 7);
 
   const payload = {
-    tken_type: 'access',
+    token_type: 'access',
     user_id: user._id,
     iat: Date.now(),
     exp: expToken.getTime(),

@@ -1,7 +1,7 @@
 const express = require('express');
 const CourseController = require('../controllers/course');
 const md_auth = require('../middleware/authenticated');
-const md_upload = require('../utils/bucketS3');
+const md_upload = require('../middleware/bucketS3');
 
 const api = express.Router();
 

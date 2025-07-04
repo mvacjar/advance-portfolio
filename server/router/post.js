@@ -1,5 +1,5 @@
 const express = require('express');
-const md_upload = require('../utils/bucketS3');
+const md_upload = require('../middleware/bucketS3');
 const PostController = require('../controllers/post');
 const md_auth = require('../middleware/authenticated');
 

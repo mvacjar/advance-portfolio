@@ -1,17 +1,24 @@
 import { index, route } from '@react-router/dev/routes';
 
 export default [
-  index('routes/web/pages/home.jsx'),
-  route('about', 'routes/web/pages/about.jsx'),
+  route('', './routes/web/layouts/clientLayout.jsx', [
+    index('routes/web/pages/home/home.jsx'),
+    route('about', 'routes/web/pages/about/about.jsx'),
+    route('blog', 'routes/web/pages/blog/blog.jsx'),
+    route('courses', 'routes/web/pages/courses/courses.jsx'),
+    route('post', 'routes/web/pages/post/post.jsx'),
+  ]),
 
   route(
     'admin',
-    'routes/admin/pages/authRoute.jsx',
+    'routes/admin/pages/auth/adminAuth.jsx',
     [
-      index('routes/admin/pages/admin.jsx'),
-      route('dashboard', 'routes/admin/pages/dashboard.jsx'),
-      route('users', 'routes/admin/pages/users.jsx'),
-      route('settings', 'routes/admin/pages/settings.jsx'),
+      index('routes/admin/pages/dashboard/dashboard.jsx'),
+      route('users', 'routes/admin/pages/users/users.jsx'),
+      route('blog', 'routes/admin/pages/blog/blog.jsx'),
+      route('courses', 'routes/admin/pages/courses/courses.jsx'),
+      route('menu', 'routes/admin/pages/menu/menu.jsx'),
+      route('newsletter', 'routes/admin/pages/newsletter/newsletter.jsx'),
     ],
     { auth: true }
   ),

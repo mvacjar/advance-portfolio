@@ -1,8 +1,10 @@
-export function ClientLayout({ children, ...props }) {
+import { Outlet } from 'react-router';
+
+export default function ClientLayout() {
   return (
     <>
       <div>ClientLayout</div>
-      {children}
+      <Outlet />
     </>
   );
 }

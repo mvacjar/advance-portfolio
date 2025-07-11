@@ -1,6 +1,11 @@
 import { Outlet, Scripts } from 'react-router';
 import '@mantine/core/styles.css';
-import { createTheme, MantineProvider, ColorSchemeScript } from '@mantine/core';
+import {
+  createTheme,
+  MantineProvider,
+  ColorSchemeScript,
+  Loader,
+} from '@mantine/core';
 
 const theme = createTheme({
   /** Put your mantine theme override here */
@@ -46,5 +51,15 @@ export function ErrorBoundary({ error }) {
         <Scripts />
       </body>
     </html>
+  );
+}
+
+export function HydrateFallback() {
+  return (
+    <div id='loading-splash'>
+      <div id='loading-splash-spinner' />
+      <Loader color='orange' size='xl' />
+      <p>Loading, please wait...</p>
+    </div>
   );
 }

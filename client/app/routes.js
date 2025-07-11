@@ -5,8 +5,8 @@ export default [
     index('routes/web/pages/home/home.jsx'),
     route('about', 'routes/web/pages/about/about.jsx'),
     route('blog', 'routes/web/pages/blog/blog.jsx'),
+    route('blog/:path', 'routes/web/pages/post/post.jsx'),
     route('courses', 'routes/web/pages/courses/courses.jsx'),
-    route('post', 'routes/web/pages/post/post.jsx'),
   ]),
 
   route(

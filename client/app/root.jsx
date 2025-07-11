@@ -58,7 +58,7 @@ export function HydrateFallback() {
   return (
     <div id='loading-splash'>
       <div id='loading-splash-spinner' />
-      <Loader color='orange' size='xl' />
+      <Loader color='orange' size='xl' type='bars' />
       <p>Loading, please wait...</p>
     </div>
   );

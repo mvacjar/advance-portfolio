@@ -1,0 +1,37 @@
+// Fonts
+$font-s: 0.875rem; // 14px - Small text, labels, notes
+$font-m: 1rem; // 16px - Base text, paragraphs
+$font-l: 1.25rem; // 20px - Subtitles, highlighted text
+$font-xl: 1.5rem; // 24px - Section titles
+$font-xxl: 2rem; // 32px - Main titles
+
+// Spacing (padding, margin, gaps)
+$space-xs: 0.25rem; // 4px - Very small spacing
+$space-s: 0.5rem; // 8px - Small spacing
+$space-m: 1rem; // 16px - Base spacing
+$space-l: 1.5rem; // 24px - Medium-large spacing
+$space-xl: 2rem; // 32px - Large spacing
+$space-xxl: 3rem; // 48px - Very large spacing
+
+// Element heights
+$height-input: 2.5rem; // 40px - Input height, small buttons
+$height-button: 3rem; // 48px - Main button height
+$height-header: 4rem; // 64px - Header/navbar height
+$height-card: 12rem; // 192px - Minimum card height
+
+// Max widths
+$width-mobile: 20rem; // 320px - Mobile minimum width
+$width-tablet: 48rem; // 768px - Tablet width
+$width-desktop: 75rem; // 1200px - Desktop content max width
+$width-wide: 90rem; // 1440px - Total max width
+
+// Borders and radius
+$border-width: 1px; // Standard border thickness
+$border-radius-s: 0.25rem; // 4px - Small radius
+$border-radius-m: 0.5rem; // 8px - Medium radius
+$border-radius-l: 1rem; // 16px - Large radius
+
+// Shadows
+$shadow-s: 0 1px 3px rgba(0, 0, 0, 0.1);
+$shadow-m: 0 4px 6px rgba(0, 0, 0, 0.1);
+$shadow-l: 0 10px 25px rgba(0, 0, 0, 0.1);

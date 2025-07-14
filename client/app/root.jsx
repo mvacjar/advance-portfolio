@@ -1,4 +1,4 @@
-import { Outlet, Scripts } from 'react-router';
+import { Outlet, Scripts, ScrollRestoration } from 'react-router';
 import '@mantine/core/styles.css';
 import {
   createTheme,
@@ -24,6 +24,7 @@ export function Layout({ children }) {
           {children}
         </MantineProvider>
         <Scripts />
+        <ScrollRestoration />
       </body>
     </html>
   );

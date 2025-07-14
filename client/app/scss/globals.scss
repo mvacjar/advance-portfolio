@@ -1,0 +1,14 @@
+@use './colors.scss';
+@use './typography.scss';
+
+html,
+body,
+#root {
+  background-color: colors.$background-light;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  //   min-height: 100%;
+  box-sizing: border-box;
+  font-family: typography.$font-primary;
+}

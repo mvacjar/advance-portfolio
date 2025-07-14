@@ -1,0 +1,65 @@
+@use '../../../../scss/colors.scss' as *;
+@use '../../../../scss/sizes.scss' as *;
+@use '../../../../scss/globals.scss' as *;
+@use '../../../../scss/utilities.scss' as *;
+
+body {
+  min-height: 100vh;
+  background-position: center;
+  background-size: contain;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding-top: $p-4xl;
+}
+
+.logo {
+  width: 200px;
+  margin-top: $m-m;
+}
+
+.mantine-Tabs {
+  &[data-variant='outline'] {
+    border: 1px solid $primary;
+  }
+}
+
+.mantine-Tabs-tab {
+  flex: 1 1 50%;
+  max-width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: $space-xs;
+  font-weight: bold;
+  font-size: $font-m;
+  padding-left: $p-xs;
+  text-align: left;
+
+  span {
+    width: auto;
+    text-align: left;
+  }
+
+  &[data-active] {
+    border-color: $primary;
+  }
+
+  .active-tab {
+    color: $primary;
+  }
+}
+
+.active-tab {
+  opacity: 1;
+  transition: opacity 0.5s;
+}
+
+.fade-tab {
+  opacity: 0.4;
+  transition: opacity 0.5s;
+}
+
+.mantine-Tabs-panel {
+  width: 80vw;
+}

@@ -3,15 +3,16 @@ import { Icon } from '../../../../assets/index';
 import { Tabs } from '@mantine/core';
 import { IconUserShield, IconUserPlus } from '@tabler/icons-react';
 import { useEffect, useState } from 'react';
+import RegisterForm from '../../components/Auth/RegisterForm/RegisterForm';
 
 export default function adminAuth() {
   const [activeTab, setActiveTab] = useState('login');
-  const [userRegistered, setUserRegistered] = useState(0);
-  const openLogin = () => setUserRegistered(0);
+  const [userRegistered, setUserRegistered] = useState(false);
 
   useEffect(() => {
-    if (userRegistered === 1) {
-      setActiveTab('register');
+    if (userRegistered === true) {
+      setActiveTab('login');
+      setUserRegistered(false);
     }
   }, [userRegistered]);
 
@@ -59,7 +60,9 @@ export default function adminAuth() {
         </Tabs.List>
 
         <Tabs.Panel value='login'></Tabs.Panel>
-        <Tabs.Panel value='register'></Tabs.Panel>
+        <Tabs.Panel value='register'>
+          <RegisterForm userRegistered={() => setUserRegistered(true)} />
+        </Tabs.Panel>
       </Tabs>
     </>
   );

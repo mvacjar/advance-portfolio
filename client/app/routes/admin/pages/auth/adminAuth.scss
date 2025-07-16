@@ -36,6 +36,10 @@ body {
   padding-left: $p-xs;
   text-align: left;
 
+  &:hover {
+    background-color: $primary-hover;
+  }
+
   span {
     width: auto;
     text-align: left;
@@ -62,4 +66,5 @@ body {
 
 .mantine-Tabs-panel {
   width: 80vw;
+  max-width: 600px;
 }

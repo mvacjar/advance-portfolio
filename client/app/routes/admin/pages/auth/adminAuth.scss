@@ -2,6 +2,7 @@
 @use '../../../../scss/sizes.scss' as *;
 @use '../../../../scss/globals.scss' as *;
 @use '../../../../scss/utilities.scss' as *;
+@use '../../../../scss/animations.scss' as *;
 
 body {
   min-height: 100vh;
@@ -18,53 +19,93 @@ body {
   margin-top: $m-m;
 }
 
-.mantine-Tabs {
-  &[data-variant='outline'] {
-    border: 1px solid $primary;
-  }
+.auth-container {
+  width: 80vw;
+  max-width: 500px;
+  margin: 0 auto;
+  overflow: hidden;
 }
 
-.mantine-Tabs-tab {
+.auth-tabs {
+  display: flex;
+  width: 100%;
+  background-color: $background-light;
+}
+
+.auth-tab {
   flex: 1 1 50%;
   max-width: 50%;
   display: flex;
   align-items: center;
   justify-content: flex-start;
-  gap: $space-xs;
   font-weight: bold;
   font-size: $font-m;
+  padding-left: $p-m;
+  padding-top: $p-xs;
   padding-left: $p-xs;
   text-align: left;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  border-bottom: 3px solid transparent;
 
-  &:hover {
-    background-color: $primary-hover;
+  &.active-tab {
+    color: $primary;
+    background-color: $background-light;
+    border-bottom-color: $primary;
+    opacity: 1;
+    transition: opacity 0.5s;
+
+    &:hover {
+      background-color: $primary-hover;
+      color: $primary;
+      border-top-left-radius: 10px;
+    }
+  }
+
+  &.fade-tab {
+    color: $primary;
+    background-color: $background-light;
+
+    opacity: 0.4;
+    transition: opacity 0.5s;
+    &:hover {
+      background-color: $primary-hover;
+      color: $primary;
+      border-bottom-color: $primary;
+      border-top-right-radius: 10px;
+    }
+  }
+
+  .icon {
+    color: $primary;
   }
 
   span {
-    width: auto;
-    text-align: left;
-  }
+    font-size: $font-m;
+    color: $text-dark;
+    text-decoration: none;
+    padding-left: $m-s;
 
-  &[data-active] {
-    border-color: $primary;
-  }
-
-  .active-tab {
-    color: $primary;
+    &:hover {
+      color: $primary;
+      text-decoration: none;
+    }
   }
 }
 
-.active-tab {
-  opacity: 1;
-  transition: opacity 0.5s;
+.auth-panel {
+  padding: 2rem;
 }
 
-.fade-tab {
-  opacity: 0.4;
-  transition: opacity 0.5s;
-}
+.btn-submit {
+  color: $text-dark;
+  background-color: $primary;
+  padding: 0 $p-xl;
+  margin: $m-xl 0;
+  font-weight: bold;
 
-.mantine-Tabs-panel {
-  width: 80vw;
-  max-width: 600px;
+  &:hover {
+    color: $text-dark;
+    background-color: $primary;
+  }
 }

@@ -1,12 +1,5 @@
 import * as Yup from 'yup';
 
-export const initialValue = () => ({
-  email: '',
-  password: '',
-  repeatPassword: '',
-  termsOfService: false,
-});
-
 export function validationSchema() {
   return Yup.object({
     email: Yup.string()

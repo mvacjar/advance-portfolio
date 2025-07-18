@@ -1,4 +1,10 @@
 import { index, route, layout } from '@react-router/dev/routes';
+import Login, {
+  action as loginAction,
+} from './routes/admin/pages/login/login.jsx';
+import Register, {
+  action as registerAction,
+} from './routes/admin/pages/register/register.jsx';
 
 export default [
   layout('./routes/web/layouts/clientLayout.jsx', [
@@ -13,8 +19,14 @@ export default [
     'admin',
     'routes/admin/pages/auth/adminAuth.jsx',
     [
-      layout('./routes/admin/layouts/adminLayout.jsx', [
-        index('routes/admin/pages/dashboard/dashboard.jsx'),
+      route('login', 'routes/admin/pages/login/login.jsx', [], {
+        action: loginAction,
+      }),
+      route('register', 'routes/admin/pages/register/register.jsx', [], {
+        action: registerAction,
+      }),
+      layout('routes/admin/layouts/adminLayout.jsx', [
+        route('dashboard', 'routes/admin/pages/dashboard/dashboard.jsx'),
         route('users', 'routes/admin/pages/users/users.jsx'),
         route('blog', 'routes/admin/pages/blog/blog.jsx'),
         route('courses', 'routes/admin/pages/courses/courses.jsx'),

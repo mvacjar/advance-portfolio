@@ -1,95 +1,95 @@
-@use './sizes.scss';
-@use './utilities.scss';
+@use './sizes.scss' as *;
+@use './utilities.scss' as *;
 
 // Responsive breakpoints
 @mixin mobile-only {
-  @media screen and (max-width: 767px) {
-    @content;
-  }
+   @media screen and (max-width: 767px) {
+      @content;
+   }
 }
 
 @mixin tablet-up {
-  @media screen and (min-width: 768px) {
-    @content;
-  }
+   @media screen and (min-width: 768px) {
+      @content;
+   }
 }
 
 @mixin desktop-up {
-  @media screen and (min-width: 1200px) {
-    @content;
-  }
+   @media screen and (min-width: 1200px) {
+      @content;
+   }
 }
 
 // Flexbox common patterns
 @mixin flex-center {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+   display: flex;
+   justify-content: center;
+   align-items: center;
 }
 
 @mixin flex-between {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
 }
 
 @mixin flex-column {
-  display: flex;
-  flex-direction: column;
+   display: flex;
+   flex-direction: column;
 }
 
 @mixin flex-column-center {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
 }
 
 // Transitions
 @mixin transition-smooth {
-  transition: all 0.3s ease;
+   transition: all 0.3s ease;
 }
 
 @mixin transition-fast {
-  transition: all 0.15s ease;
+   transition: all 0.15s ease;
 }
 
 // Button states
 @mixin button-base {
-  padding: $space-s $space-m;
-  border: none;
-  border-radius: $border-radius-m;
-  cursor: pointer;
-  font-weight: 500;
-  @include transition-smooth;
+   padding: $space-s $space-m;
+   border: none;
+   border-radius: $border-radius-m;
+   cursor: pointer;
+   font-weight: 500;
+   @include transition-smooth;
 
-  &:hover {
-    transform: translateY(-1px);
-  }
+   &:hover {
+      transform: translateY(-1px);
+   }
 
-  &:active {
-    transform: translateY(0);
-  }
+   &:active {
+      transform: translateY(0);
+   }
 }
 
 @mixin button-primary {
-  @include button-base;
-  background-color: $primary;
-  color: white;
+   @include button-base;
+   background-color: $primary;
+   color: white;
 
-  &:hover {
-    background-color: $primary-hover;
-  }
+   &:hover {
+      background-color: $primary-hover;
+   }
 }
 
 // Card styling
 @mixin card-base {
-  background: $background-dark-web;
-  border-radius: $border-radius-l;
-  box-shadow: $shadow-m;
-  padding: $space-l;
-  @include transition-smooth;
+   background: $background-dark-web;
+   border-radius: $border-radius-l;
+   box-shadow: $shadow-m;
+   padding: $space-l;
+   @include transition-smooth;
 
-  &:hover {
-    box-shadow: $shadow-l;
-  }
+   &:hover {
+      box-shadow: $shadow-l;
+   }
 }

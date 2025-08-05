@@ -1,14 +1,14 @@
-import LogoLight from './images/LogoLight.svg?react';
-import LogoDark from './images/LogoDark.svg?react';
+import LogoLight from './images/logiLight.svg';
+import LogoDark from './images/logiDark.svg';
 import amazon from './images/amazon_snake.png';
 
 const Icon = {
-  LogoLight,
-  LogoDark,
+   LogoLight,
+   LogoDark,
 };
 
 const Image = {
-  amazon,
+   amazon,
 };
 
 export { Icon, Image };

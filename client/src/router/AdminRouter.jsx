@@ -9,7 +9,7 @@ import {
 } from '../pages/admin';
 import { AdminLayout } from '../layouts';
 
-const user = { email: 'mvacjar@gmail.com' };
+const user = null;
 
 export function AdminRouter() {
    const loadLayout = (Layout, Page) => {
@@ -23,10 +23,7 @@ export function AdminRouter() {
    return (
       <Routes>
          {!user ? (
-            <Route
-               path='/admin/*'
-               element={loadLayout(AdminLayout, Auth)}
-            />
+            <Route path='/admin/*' element={<Auth />} />
          ) : (
             <>
                {['/admin', '/admin/menu'].map((path) => (

@@ -1,14 +1,13 @@
-@use './colors.scss';
-@use './typography.scss';
+@use './colors' as colors;
+@use './typography' as typo;
 
 html,
 body,
 #root {
-  background-color: colors.$background-light;
-  margin: 0;
-  padding: 0;
-  height: 100%;
-  //   min-height: 100%;
-  box-sizing: border-box;
-  font-family: typography.$font-primary;
+   background-color: colors.$background-light;
+   margin: 0;
+   padding: 0;
+   height: 100%;
+   box-sizing: border-box;
+   font-family: typo.$font-primary;
 }

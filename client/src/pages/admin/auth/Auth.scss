@@ -1,0 +1,35 @@
+@use '~/src/scss/colors.scss' as colors;
+
+html,
+body {
+   height: 100%;
+   margin: 0;
+   padding: 0;
+}
+
+body {
+   background-color: colors.$bg-dark;
+}
+
+.container {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   flex-direction: column;
+   margin-top: 10rem;
+}
+
+.logo {
+   width: 200px;
+}
+
+h1 {
+   color: colors.$text-light;
+}
+
+.form-login,
+.form-signup {
+   display: flex;
+   flex-direction: column;
+   color: #494949;
+}

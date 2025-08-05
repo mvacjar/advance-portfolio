@@ -1,8 +1,8 @@
-@import './globals.scss';
-@import './mediaqueries.scss';
-@import './patterns&positions.scss';
-@import './sizes.scss';
-@import './typography.scss';
-@import './utilities.scss';
-@import './animations.scss';
-@import './colors.scss';
+@use './globals' as *;
+@use './mediaqueries' as *;
+@use './patterns&positions' as *;
+@use './sizes' as *;
+@use './typography' as *;
+@use './utilities' as *;
+@use './animations' as *;
+@use './colors' as *;

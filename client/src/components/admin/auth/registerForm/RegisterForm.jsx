@@ -62,17 +62,17 @@ export function RegisterForm({
         }}
       >
         <FormControl sx={formControlStyles}>
-          <InputLabel htmlFor='name'>Name</InputLabel>
+          <InputLabel htmlFor='username'>Username</InputLabel>
           <Input
-            name='name'
-            id='name'
+            name='username'
+            id='username'
             type='text'
             autoComplete='name'
             onChange={formik.handleChange}
-            value={formik.values.name}
+            value={formik.values.username}
           />
-          {formik.errors.name && formik.touched.name && (
-            <div style={{ color: 'red' }}>{formik.errors.name}</div>
+          {formik.errors.username && formik.touched.username && (
+            <div style={{ color: 'red' }}>{formik.errors.username}</div>
           )}
         </FormControl>
         <FormControl sx={formControlStyles}>

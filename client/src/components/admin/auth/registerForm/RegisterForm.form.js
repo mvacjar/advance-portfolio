@@ -2,7 +2,7 @@ import * as Yup from 'yup';
 
 export function InitialValues() {
   return {
-    name: '',
+    username: '',
     email: '',
     password: '',
     repeatPassword: '',
@@ -12,7 +12,7 @@ export function InitialValues() {
 
 export function ValidationSchema() {
   return Yup.object().shape({
-    name: Yup.string()
+    username: Yup.string()
       .required('Name is required')
       .min(2, 'Name must be at least 2 characters'),
     email: Yup.string()

@@ -36,7 +36,7 @@ app.use(`/api/${API_VERSION}`, newsletterRoutes);
 // Error handling middleware
 app.use((err, req, res, next) => {
   console.error(err.stack);
-  res.status(500).send({ msg: 'Something brokes!' });
+  res.status(500).send({ msg: 'Something is broken!' });
 });
 
 // Handle 404

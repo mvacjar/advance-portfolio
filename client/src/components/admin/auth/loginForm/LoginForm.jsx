@@ -26,13 +26,15 @@ export function LoginForm({ boxPanelStyles, formControlStyles, buttonStyles }) {
       >
         <FormControl sx={formControlStyles}>
           <InputLabel htmlFor='email'>Email</InputLabel>
-          <Input id='email' type='text' />
+          <Input name='email' id='email' type='text' autoComplete='email' />
         </FormControl>
 
         <FormControl sx={formControlStyles}>
           <InputLabel htmlFor='password'>Password</InputLabel>
           <Input
+            name='password'
             id='password'
+            autoComplete='current-password'
             type={isVisiblePassword ? 'text' : 'password'}
             endAdornment={
               <InputAdornment position='end'>
@@ -40,9 +42,13 @@ export function LoginForm({ boxPanelStyles, formControlStyles, buttonStyles }) {
                   aria-label='toggle password visibility'
                   onClick={handleVisiblePassword}
                   edge='end'
-                  sx={{ color: '#fc9f14' }}
+                  sx={{ color: '#fc9f14', marginRight: '0px' }}
                 >
-                  {isVisiblePassword ? <Visibility /> : <VisibilityOff />}
+                  {isVisiblePassword ? (
+                    <Visibility fontSize='small' />
+                  ) : (
+                    <VisibilityOff fontSize='small' />
+                  )}
                 </IconButton>
               </InputAdornment>
             }

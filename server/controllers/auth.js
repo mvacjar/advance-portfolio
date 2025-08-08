@@ -4,7 +4,7 @@ const jwt = require('../utils/jwt');
 
 async function register(req, res) {
   try {
-    const { firstname, lastname, email, password } = req.body;
+    const { username, email, password } = req.body;
     console.log('req.body:', req.body);
 
     if (!email) {
@@ -17,8 +17,7 @@ async function register(req, res) {
     }
 
     const user = new User({
-      firstname,
-      lastname,
+      username,
       email: email.toLowerCase(),
       password,
       role: 'user',
@@ -81,7 +80,9 @@ async function refreshAccessToken(req, res) {
         if (!userStorage) {
           res.status(404).send({ msg: 'User not found' });
         } else {
-          res.status(200).send({ accessToken: jwt.createAccessToken(userStorage) });
+          res
+            .status(200)
+            .send({ accessToken: jwt.createAccessToken(userStorage) });
         }
       }
     }

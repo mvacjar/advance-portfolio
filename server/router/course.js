@@ -5,9 +5,21 @@ const md_upload = require('../middleware/bucketS3');
 
 const api = express.Router();
 
-api.post('/course', [md_auth.asureAuth, md_upload.single('miniature')], CourseController.createCourse);
+api.post(
+  '/course',
+  [md_auth.assureAuth, md_upload.single('miniature')],
+  CourseController.createCourse
+);
 api.get('/courses', CourseController.getCourses);
-api.patch('/course/:id', [md_auth.asureAuth, md_upload.single('miniature')], CourseController.updateCourse);
-api.delete('/course/:id', [md_auth.asureAuth, md_upload.single('miniature')], CourseController.deleteCourse);
+api.patch(
+  '/course/:id',
+  [md_auth.assureAuth, md_upload.single('miniature')],
+  CourseController.updateCourse
+);
+api.delete(
+  '/course/:id',
+  [md_auth.assureAuth, md_upload.single('miniature')],
+  CourseController.deleteCourse
+);
 
 module.exports = api;

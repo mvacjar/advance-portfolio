@@ -39,7 +39,6 @@ export const tabListStyles = (activeIndex) => ({
   },
   '& .MuiTabs-indicator': {
     backgroundColor: '#fc9f14',
-    height: '4px',
     width: '50% !important',
     left: activeIndex === 'login' ? '0%' : '50%',
     transition: 'left 0.3s ease',
@@ -93,6 +92,7 @@ export const buttonStyles = {
   fontWeight: 'bold',
   width: '50%',
   fontSize: '1rem',
+
   borderRadius: '5px',
   boxShadow: '0 4px 10px rgba(0, 0, 0, 0.2)',
   '&:hover': {

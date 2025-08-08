@@ -17,23 +17,16 @@ import TabPanel from '@mui/lab/TabPanel';
 
 export function Auth() {
   const [activeIndex, setActiveIndex] = useState('login');
-  const [registered, setRegistered] = useState(false);
+  const openLogin = () => setActiveIndex('login');
 
   const handleChange = (event, newValue) => {
     setActiveIndex(newValue);
   };
 
   useEffect(() => {
+    // avoid ux tag error
     setActiveIndex((prev) => prev);
-    if (registered) {
-      setRegistered(false);
-    }
-  }, [registered]);
-
-  const onSignUp = async () => {
-    //   Register Logic
-    setRegistered(true);
-  };
+  }, []);
 
   return (
     <>
@@ -68,7 +61,7 @@ export function Auth() {
                 boxPanelStyles={boxPanelStyles}
                 formControlStyles={formControlStyles}
                 buttonStyles={buttonStyles}
-                onSignUp={onSignUp}
+                openLogin={openLogin}
               />
             </TabPanel>
           </TabContext>

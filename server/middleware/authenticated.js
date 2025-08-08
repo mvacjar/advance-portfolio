@@ -1,6 +1,6 @@
 const jwt = require('../utils/jwt');
 
-function asureAuth(req, res, next) {
+function assureAuth(req, res, next) {
   if (!req.headers.authorization) {
     return res.status(403).send({ msg: 'No bearer token' });
   }
@@ -25,5 +25,5 @@ function asureAuth(req, res, next) {
 }
 
 module.exports = {
-  asureAuth,
+  assureAuth,
 };
